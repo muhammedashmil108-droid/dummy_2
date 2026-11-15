@@ -8,6 +8,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+final nameController=TextEditingController();
+final ageController=TextEditingController();
+
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +24,7 @@ class _HomeState extends State<Home> {
       child: Column(
         children: [
           TextField(
+controller: nameController,
             decoration: InputDecoration(
               labelText: "Name",
               border: OutlineInputBorder(),
@@ -26,6 +32,7 @@ class _HomeState extends State<Home> {
           ),
           SizedBox(height: 15,),
            TextField(
+            controller: ageController,
             decoration: InputDecoration(
               labelText: "Age",
               border: OutlineInputBorder(),

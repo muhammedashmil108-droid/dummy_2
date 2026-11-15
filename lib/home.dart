@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
-  final String username;
-  const Home({super.key,required this.username});
+  const Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();
@@ -12,11 +11,38 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber,
       appBar: AppBar(
-        title: Text(widget.username,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-        centerTitle: true,
+        title: Text("Student",style: TextStyle(fontSize: 25,fontWeight:FontWeight.bold),),
       ),
-      
+      body: Padding(padding: EdgeInsets.all(16),
+      child: Column(
+        children: [
+          TextField(
+            decoration: InputDecoration(
+              labelText: "Name",
+              border: OutlineInputBorder(),
+            ),
+          ),
+          SizedBox(height: 15,),
+           TextField(
+            decoration: InputDecoration(
+              labelText: "Age",
+              border: OutlineInputBorder(),
+            ),
+          ),
+                 SizedBox(height: 15,),
+                 ElevatedButton(style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.black87
+                 ),
+                  onPressed: (){}
+                 , child: Text("Save"))
+
+        ],
+      ),
+      ),
+
     );
   }
 }

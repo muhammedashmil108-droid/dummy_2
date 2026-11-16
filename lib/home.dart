@@ -16,7 +16,7 @@ final ageController=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
+      backgroundColor: const Color.fromARGB(172, 255, 193, 7),
       appBar: AppBar(
         title: Text("Student",style: TextStyle(fontSize: 25,fontWeight:FontWeight.bold),),
       ),

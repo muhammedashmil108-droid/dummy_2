@@ -11,8 +11,12 @@ class _HomeState extends State<Home> {
 final nameController=TextEditingController();
 final ageController=TextEditingController();
 
-
-  
+@override
+  void dispose(){
+    super.dispose();
+    nameController.dispose();
+    ageController.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
